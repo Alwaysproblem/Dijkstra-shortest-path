@@ -22,12 +22,12 @@
 #define NOTUSED     -1
 #define USED        0
 
-void init_D_para(WGraph, int *, int *);
+void init_D_para(WGraph, int *, int *, int *, int *);
 
 void relax_along(WGraph, int, int, int*, int*);
 
-int * Dijkstra_Algorithm(WGraph, int *, int *);
+int * Dijkstra_Algorithm(WGraph, int, int);
 
-void showPath(WGraph, int *, int *, int);
+void showPath(WGraph, int *, int *, int, int, int);
 
 #endif

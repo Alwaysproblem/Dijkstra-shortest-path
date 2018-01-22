@@ -16,6 +16,10 @@ typedef struct WEdge {
    int    weight;
 } WEdge;
 
+int get_nV(WGraph);
+// acquire the number of vertices.
+
+int get_nE(WGraph);
 
 bool W_validV(WGraph, W_Vertex);
 // check if the Vertex is the valid number.

@@ -14,6 +14,14 @@ typedef struct WGraphRep {
 } WGraphRep;
 
 
+int get_nV(WGraph g){
+    return g->nV;
+}
+
+int get_nE(WGraph g){
+    return g->nE;
+}
+
 WGraph W_newGraph(int V){
    assert(V >= 0);
    int i;
