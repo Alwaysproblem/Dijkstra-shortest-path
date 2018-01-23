@@ -6,14 +6,14 @@
 ProjectName            :=Dijkstra_shortest
 ConfigurationName      :=Debug
 WorkspacePath          :=C:/Users/user/Desktop/C_proj/user
-ProjectPath            :=C:/Users/user/Desktop/C_proj/user/Dijkstra_shortest
+ProjectPath            :=C:/Users/user/Desktop/C_proj/DIJ
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=user
-Date                   :=21/01/2018
+Date                   :=23/01/2018
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/MinGW/bin/g++.exe
 SharedObjectLinkerName :=C:/MinGW/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/MinGW/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/src_Dijkstra.c$(ObjectSuffix) $(IntermediateDirectory)/src_main.c$(ObjectSuffix) $(IntermediateDirectory)/src_WGgraph.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_main.c$(ObjectSuffix) $(IntermediateDirectory)/src_WGgraph.c$(ObjectSuffix) $(IntermediateDirectory)/src_Dijkstra.c$(ObjectSuffix) 
 
 
 
@@ -93,16 +93,8 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/src_Dijkstra.c$(ObjectSuffix): src/Dijkstra.c $(IntermediateDirectory)/src_Dijkstra.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "C:/Users/user/Desktop/C_proj/user/Dijkstra_shortest/src/Dijkstra.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Dijkstra.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_Dijkstra.c$(DependSuffix): src/Dijkstra.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Dijkstra.c$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Dijkstra.c$(DependSuffix) -MM src/Dijkstra.c
-
-$(IntermediateDirectory)/src_Dijkstra.c$(PreprocessSuffix): src/Dijkstra.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Dijkstra.c$(PreprocessSuffix) src/Dijkstra.c
-
 $(IntermediateDirectory)/src_main.c$(ObjectSuffix): src/main.c $(IntermediateDirectory)/src_main.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "C:/Users/user/Desktop/C_proj/user/Dijkstra_shortest/src/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_main.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "C:/Users/user/Desktop/C_proj/DIJ/src/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_main.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_main.c$(DependSuffix): src/main.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/src_main.c$(DependSuffix) -MM src/main.c
 
@@ -110,12 +102,20 @@ $(IntermediateDirectory)/src_main.c$(PreprocessSuffix): src/main.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_main.c$(PreprocessSuffix) src/main.c
 
 $(IntermediateDirectory)/src_WGgraph.c$(ObjectSuffix): src/WGgraph.c $(IntermediateDirectory)/src_WGgraph.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "C:/Users/user/Desktop/C_proj/user/Dijkstra_shortest/src/WGgraph.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_WGgraph.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "C:/Users/user/Desktop/C_proj/DIJ/src/WGgraph.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_WGgraph.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_WGgraph.c$(DependSuffix): src/WGgraph.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_WGgraph.c$(ObjectSuffix) -MF$(IntermediateDirectory)/src_WGgraph.c$(DependSuffix) -MM src/WGgraph.c
 
 $(IntermediateDirectory)/src_WGgraph.c$(PreprocessSuffix): src/WGgraph.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_WGgraph.c$(PreprocessSuffix) src/WGgraph.c
+
+$(IntermediateDirectory)/src_Dijkstra.c$(ObjectSuffix): src/Dijkstra.c $(IntermediateDirectory)/src_Dijkstra.c$(DependSuffix)
+	$(CC) $(SourceSwitch) "C:/Users/user/Desktop/C_proj/DIJ/src/Dijkstra.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Dijkstra.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Dijkstra.c$(DependSuffix): src/Dijkstra.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Dijkstra.c$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Dijkstra.c$(DependSuffix) -MM src/Dijkstra.c
+
+$(IntermediateDirectory)/src_Dijkstra.c$(PreprocessSuffix): src/Dijkstra.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Dijkstra.c$(PreprocessSuffix) src/Dijkstra.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
