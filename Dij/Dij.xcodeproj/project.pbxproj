@@ -10,6 +10,7 @@
 		D7A02BD82015FDF800734114 /* WGgraph.c in Sources */ = {isa = PBXBuildFile; fileRef = D7A02BD22015FDF800734114 /* WGgraph.c */; };
 		D7A02BDA2015FDF800734114 /* Dijkstra.c in Sources */ = {isa = PBXBuildFile; fileRef = D7A02BD42015FDF800734114 /* Dijkstra.c */; };
 		D7A02BDB2015FDF800734114 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D7A02BD52015FDF800734114 /* main.c */; };
+		D7C29ECE201830A8004DF3FA /* LandList.c in Sources */ = {isa = PBXBuildFile; fileRef = D7C29ECC201830A8004DF3FA /* LandList.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		D7A02BD52015FDF800734114 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = ../../src/main.c; sourceTree = "<group>"; };
 		D7A02BD62015FDF800734114 /* Dijkstra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dijkstra.h; path = ../../src/Dijkstra.h; sourceTree = "<group>"; };
 		D7A02BD72015FDF800734114 /* WGgraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WGgraph.h; path = ../../src/WGgraph.h; sourceTree = "<group>"; };
+		D7C29ECC201830A8004DF3FA /* LandList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = LandList.c; path = ../../src/LandList.c; sourceTree = "<group>"; };
+		D7C29ECD201830A8004DF3FA /* LandList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LandList.h; path = ../../src/LandList.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				D7A02BD52015FDF800734114 /* main.c */,
 				D7A02BD22015FDF800734114 /* WGgraph.c */,
 				D7A02BD72015FDF800734114 /* WGgraph.h */,
+				D7C29ECC201830A8004DF3FA /* LandList.c */,
+				D7C29ECD201830A8004DF3FA /* LandList.h */,
 			);
 			path = Dij;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			files = (
 				D7A02BDB2015FDF800734114 /* main.c in Sources */,
 				D7A02BD82015FDF800734114 /* WGgraph.c in Sources */,
+				D7C29ECE201830A8004DF3FA /* LandList.c in Sources */,
 				D7A02BDA2015FDF800734114 /* Dijkstra.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
