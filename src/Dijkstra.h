@@ -28,6 +28,8 @@
 
 int * Dijkstra_Algorithm(WGraph, int, int);
 
-void showPath(WGraph, int *, int *, int, int, int);
+//void showPath(WGraph, int *, int *, int, int, int);
+
+void delet_path(int *);
 
 #endif

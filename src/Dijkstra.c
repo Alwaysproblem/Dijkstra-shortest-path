@@ -35,6 +35,23 @@ void relax_along(WGraph g, int cur_node, int next_node, int* dist, int* prev){
     
 }
 
+
+void showPath(WGraph g, int * prev, int * path, int src, int dest, int mode, int n){
+    
+    if (dest == src){
+        if (mode == DDEBUG) printf("%d\n", src);
+        path[n - 1] = src;
+        return;
+    }
+    else{
+        if (mode == DDEBUG) printf("%d <- ", dest);
+        path[n - 1] = dest;
+        showPath(g, prev, path, src, prev[dest], mode, n - 1);
+    }
+    
+}
+
+
 int * Dijkstra_Algorithm(WGraph g, int src, int dest){
     int idx = 0;
     int nV = get_nV(g);
@@ -71,29 +88,18 @@ int * Dijkstra_Algorithm(WGraph g, int src, int dest){
         visit[idx_m] = True;
     }
     
-    showPath(g, prev, path, src, dest, DDEBUG);
+    showPath(g, prev, path, src, dest, NORMAL, nV);
     free(visit);
     free(dist);
     free(prev);
     
-    free(path);
+//    free(path);
     
-    return NULL;
+    return path;
 }
 
-void showPath(WGraph g, int * prev, int * path, int src, int dest, int mode){
-    
-    if (dest != src && mode == DDEBUG){
-        printf("%d <- ", dest);
-    }
-    
-    if (dest == src){
-        printf("%d\n", src);
-        return;
-    }
-    else{
-        showPath(g, prev, path, src, prev[dest], mode);
-    }
-    
+void delet_path(int * path){
+    free(path);
 }
+
 
