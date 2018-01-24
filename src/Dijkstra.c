@@ -32,9 +32,6 @@ void relax_along(WGraph g, int cur_node, int next_node, int* dist, int* prev){
             prev[next_node] = cur_node;
         }
     }
-    else{
-        
-    }
     
 }
 
@@ -70,6 +67,8 @@ int * Dijkstra_Algorithm(WGraph g, int src, int dest){
                 relax_along(g, idx_m, idx, dist, prev);
             }
         }
+        
+        visit[idx_m] = True;
     }
     
     showPath(g, prev, path, src, dest, DDEBUG);
@@ -77,16 +76,19 @@ int * Dijkstra_Algorithm(WGraph g, int src, int dest){
     free(dist);
     free(prev);
     
+    free(path);
+    
     return NULL;
 }
 
 void showPath(WGraph g, int * prev, int * path, int src, int dest, int mode){
     
-    if (mode == DDEBUG){
+    if (dest != src && mode == DDEBUG){
         printf("%d <- ", dest);
     }
     
     if (dest == src){
+        printf("%d\n", src);
         return;
     }
     else{
